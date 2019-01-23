@@ -26,10 +26,10 @@
    * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion".  See the Rush documentation
    * for details about these alternatives.
    */
-  "pnpmVersion": "2.15.1",
+  // "pnpmVersion": "2.15.1",
 
   // "npmVersion": "4.5.0",
-  // "yarnVersion": "1.9.4",
+  "yarnVersion": "1.9.4",
 
   /**
    * Options that are only used when the PNPM package manager is selected
@@ -95,8 +95,8 @@
    * To remove these restrictions, you could set projectFolderMinDepth=1
    * and set projectFolderMaxDepth to a large number.
    */
-  "projectFolderMinDepth": 3,
-  "projectFolderMaxDepth": 3,
+  // "projectFolderMinDepth": 2,
+  // "projectFolderMaxDepth": 2,
 
   /**
    * This feature helps you to review and approve new packages before they are introduced
@@ -254,6 +254,14 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
+    {
+      "packageName": "my-public",
+      "projectFolder": "packages/my-public",
+    },
+    {
+      "packageName": "my-other",
+      "projectFolder": "packages/my-other",
+    },
     // {
     //   /**
     //    * The NPM package name of the project (must match package.json)

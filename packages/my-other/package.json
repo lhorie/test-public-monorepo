@@ -1,0 +1,12 @@
+{
+  "name": "my-other",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "mkdir -p dist && cp index.js dist/"
+  },
+  "dependencies": {
+    "my-public": "0.0.1"
+  }
+}

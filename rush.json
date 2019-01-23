@@ -95,8 +95,8 @@
    * To remove these restrictions, you could set projectFolderMinDepth=1
    * and set projectFolderMaxDepth to a large number.
    */
-  // "projectFolderMinDepth": 2,
-  // "projectFolderMaxDepth": 2,
+  "projectFolderMinDepth": 1,
+  "projectFolderMaxDepth": 1,
 
   /**
    * This feature helps you to review and approve new packages before they are introduced
@@ -256,11 +256,11 @@
   "projects": [
     {
       "packageName": "my-public",
-      "projectFolder": "packages/my-public",
+      "projectFolder": "my-public",
     },
     {
       "packageName": "my-other",
-      "projectFolder": "packages/my-other",
+      "projectFolder": "my-other",
     },
     // {
     //   /**

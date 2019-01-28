@@ -1,9 +1,9 @@
 {
-  "name": "fusion-plugin-styletron-react",
-  "version": "2.5.4",
-  "description": "The Fusion plugin for Styletron, which, in addition to providing a easy-to-use styled-component-like interface, provides powerful server-side CSS optimizations, yielding less CSS code down the wire.",
+  "name": "fusion-plugin-react-router",
+  "description": "The `fusion-plugin-react-router` package provides a universal router plugin for React.",
+  "version": "1.5.0",
   "license": "MIT",
-  "repository": "fusionjs/fusion-plugin-styletron-react",
+  "repository": "fusionjs/fusion-plugin-react-router",
   "files": [
     "dist",
     "src"
@@ -22,15 +22,19 @@
     "./dist/browser.es2015.es.js": "./dist/browser.es2017.es.js"
   },
   "dependencies": {
-    "css-to-js-sourcemap-worker": "^2.0.4",
-    "styletron-engine-atomic": "^1.0.9"
+    "history": "^4.7.2",
+    "prop-types": "^15.6.2",
+    "react-router-dom": "^4.3.1"
+  },
+  "peerDependencies": {
+    "fusion-core": "^1.10.2",
+    "react": "14.x - 16.x",
+    "react-dom": "14.x - 16.x"
   },
   "devDependencies": {
-    "@babel/preset-react": "7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "create-universal-package": "3.4.6",
-    "enzyme": "3.8.0",
-    "enzyme-adapter-react-16": "1.7.1",
     "eslint": "^5.12.1",
     "eslint-config-fusion": "^4.0.0",
     "eslint-plugin-cup": "^2.0.1",
@@ -41,25 +45,24 @@
     "eslint-plugin-react": "^7.12.4",
     "flow-bin": "^0.91.0",
     "fusion-core": "^1.10.2",
+    "fusion-plugin-universal-events": "^1.3.0",
+    "fusion-react": "^1.3.4",
+    "fusion-test-utils": "^1.3.0",
+    "fusion-tokens": "^1.1.1",
     "nyc": "13.1.0",
     "prettier": "^1.16.1",
-    "react": "16.6.3",
-    "react-dom": "16.6.3",
-    "styletron-react": "^4.3.6",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "tape-cup": "4.7.1",
     "unitest": "2.1.1"
-  },
-  "peerDependencies": {
-    "fusion-core": "^1.10.2",
-    "react": "14.x - 16.x",
-    "styletron-react": "^4.3.0"
   },
   "scripts": {
     "clean": "rm -rf dist",
     "lint": "eslint . --ignore-path .gitignore",
     "build-test": "rm -rf dist-tests && cup build-tests",
-    "just-test": "node_modules/.bin/unitest --browser=dist-tests/browser.js && node dist-tests/node.js",
+    "just-test": "node_modules/.bin/unitest --browser=dist-tests/browser.js --node=dist-tests/node.js",
     "test": "npm run build-test && npm run just-test",
+    "cover": "npm run build-test && nyc npm run just-test",
     "prepublish": "npm run transpile",
     "build": "npm run clean && cup build",
     "flow": "flow check"

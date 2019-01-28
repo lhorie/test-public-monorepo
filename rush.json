@@ -255,6 +255,10 @@
    */
   "projects": [
     {
+      "packageName": "fusion-plugin-react-router",
+      "projectFolder": "fusion-plugin-react-router"
+    },
+    {
       "packageName": "fusion-plugin-styletron-react",
       "projectFolder": "fusion-plugin-styletron-react"
     },

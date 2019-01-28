@@ -740,7 +740,7 @@
 
 "@rush-temp/fusion-plugin-jwt@file:./projects/fusion-plugin-jwt.tgz":
   version "0.0.0"
-  resolved "file:./projects/fusion-plugin-jwt.tgz#697edb4f2e93bff209e6edd065ab2a72ec304183"
+  resolved "file:./projects/fusion-plugin-jwt.tgz"
   dependencies:
     babel-eslint "^10.0.1"
     babel-plugin-transform-flow-strip-types "^6.22.0"
@@ -765,13 +765,42 @@
     tape-cup "^4.7.1"
     unitest "^2.1.1"
 
+"@rush-temp/fusion-plugin-react-helmet-async@file:./projects/fusion-plugin-react-helmet-async.tgz":
+  version "0.0.0"
+  resolved "file:./projects/fusion-plugin-react-helmet-async.tgz#112ff717fab87f63f518873ee2ae9e9a16382eeb"
+  dependencies:
+    "@babel/preset-react" "^7.0.0"
+    babel-eslint "^10.0.1"
+    create-universal-package "^3.4.6"
+    eslint "^5.12.1"
+    eslint-config-fusion "^4.0.0"
+    eslint-plugin-cup "^2.0.1"
+    eslint-plugin-flowtype "^3.2.1"
+    eslint-plugin-import "^2.15.0"
+    eslint-plugin-jest "^22.1.3"
+    eslint-plugin-prettier "^3.0.1"
+    eslint-plugin-react "^7.12.4"
+    flow-bin "^0.91.0"
+    fusion-core "^1.10.2"
+    fusion-react "1.3.4"
+    fusion-test-utils "^1.3.0"
+    fusion-tokens "^1.1.1"
+    nyc "^13.1.0"
+    prettier "^1.16.1"
+    react "^16.7.0"
+    react-dom "^16.7.0"
+    react-helmet-async "^0.2.0"
+    regenerator-runtime "^0.13.1"
+    tape-cup "^4.7.1"
+    unitest "^2.1.1"
+
 "@rush-temp/fusion-plugin-react-router@file:./projects/fusion-plugin-react-router.tgz":
   version "0.0.0"
   resolved "file:./projects/fusion-plugin-react-router.tgz"
   dependencies:
     "@babel/preset-react" "^7.0.0"
     babel-eslint "^10.0.1"
-    create-universal-package "3.4.6"
+    create-universal-package "^3.4.6"
     eslint "^5.12.1"
     eslint-config-fusion "^4.0.0"
     eslint-plugin-cup "^2.0.1"
@@ -787,22 +816,22 @@
     fusion-test-utils "^1.3.0"
     fusion-tokens "^1.1.1"
     history "^4.7.2"
-    nyc "13.1.0"
+    nyc "^13.1.0"
     prettier "^1.16.1"
     prop-types "^15.6.2"
-    react "^16.6.3"
-    react-dom "^16.6.3"
+    react "^16.7.0"
+    react-dom "^16.7.0"
     react-router-dom "^4.3.1"
-    tape-cup "4.7.1"
-    unitest "2.1.1"
+    tape-cup "^4.7.1"
+    unitest "^2.1.1"
 
 "@rush-temp/fusion-plugin-styletron-react@file:./projects/fusion-plugin-styletron-react.tgz":
   version "0.0.0"
   resolved "file:./projects/fusion-plugin-styletron-react.tgz"
   dependencies:
-    "@babel/preset-react" "7.0.0"
+    "@babel/preset-react" "^7.0.0"
     babel-eslint "^10.0.1"
-    create-universal-package "3.4.6"
+    create-universal-package "^3.4.6"
     css-to-js-sourcemap-worker "^2.0.4"
     enzyme "3.8.0"
     enzyme-adapter-react-16 "1.7.1"
@@ -816,14 +845,14 @@
     eslint-plugin-react "^7.12.4"
     flow-bin "^0.91.0"
     fusion-core "^1.10.2"
-    nyc "13.1.0"
+    nyc "^13.1.0"
     prettier "^1.16.1"
-    react "16.6.3"
-    react-dom "16.6.3"
+    react "^16.7.0"
+    react-dom "^16.7.0"
     styletron-engine-atomic "^1.0.9"
     styletron-react "^4.3.6"
-    tape-cup "4.7.1"
-    unitest "2.1.1"
+    tape-cup "^4.7.1"
+    unitest "^2.1.1"
 
 "@rush-temp/my-other@file:./projects/my-other.tgz":
   version "0.0.0"
@@ -832,7 +861,7 @@
     babel-eslint "^10.0.1"
     eslint "^5.12.1"
     eslint-config-fusion "^4.0.0"
-    eslint-plugin-cup "^2.0.0"
+    eslint-plugin-cup "^2.0.1"
     eslint-plugin-flowtype "^3.2.1"
     eslint-plugin-import "^2.15.0"
     eslint-plugin-jest "^22.1.3"
@@ -848,7 +877,7 @@
     babel-eslint "^10.0.1"
     eslint "^5.12.1"
     eslint-config-fusion "^4.0.0"
-    eslint-plugin-cup "^2.0.0"
+    eslint-plugin-cup "^2.0.1"
     eslint-plugin-flowtype "^3.2.1"
     eslint-plugin-import "^2.15.0"
     eslint-plugin-jest "^22.1.3"
@@ -2616,18 +2645,7 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://unpm.uberinternal.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
 
-fusion-core@1.10.1:
-  version "1.10.1"
-  resolved "https://unpm.uberinternal.com/fusion-core/-/fusion-core-1.10.1.tgz#99a0f2a3dcb1554db87a2b102b7fc031a7b9960d"
-  dependencies:
-    koa "^2.6.2"
-    koa-compose "^4.1.0"
-    node-mocks-http "^1.7.3"
-    toposort "^2.0.2"
-    ua-parser-js "^0.7.19"
-    uuid "^3.3.2"
-
-fusion-core@^1.10.0, fusion-core@^1.10.2:
+fusion-core@^1.10.2:
   version "1.10.2"
   resolved "https://unpm.uberinternal.com/fusion-core/-/fusion-core-1.10.2.tgz#4b098d1c08f61eb51838172fb0537eba5f107595"
   dependencies:
@@ -2643,6 +2661,13 @@ fusion-plugin-universal-events@^1.3.0:
   resolved "https://unpm.uberinternal.com/fusion-plugin-universal-events/-/fusion-plugin-universal-events-1.3.2.tgz#b97463547c733405741c12711bb4bcdcd391beb0"
   dependencies:
     koa-bodyparser "4.2.1"
+
+fusion-react@1.3.4:
+  version "1.3.4"
+  resolved "https://unpm.uberinternal.com/fusion-react/-/fusion-react-1.3.4.tgz#10265436f4616e8e6e5c4e9d6f267e8350033b83"
+  dependencies:
+    prop-types "^15.6.2"
+    react-is "^16.6.3"
 
 fusion-react@^1.3.4:
   version "1.3.7"
@@ -4668,7 +4693,7 @@ react-dom@16.6.3:
     prop-types "^15.6.2"
     scheduler "^0.11.2"
 
-react-dom@^16.6.3:
+react-dom@^16.6.3, react-dom@^16.7.0:
   version "16.7.0"
   resolved "https://unpm.uberinternal.com/react-dom/-/react-dom-16.7.0.tgz#a17b2a7ca89ee7390bc1ed5eb81783c7461748b8"
   dependencies:
@@ -4677,7 +4702,20 @@ react-dom@^16.6.3:
     prop-types "^15.6.2"
     scheduler "^0.12.0"
 
-react-is@^16.6.1, react-is@^16.7.0:
+react-fast-compare@^2.0.2:
+  version "2.0.4"
+  resolved "https://unpm.uberinternal.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
+
+react-helmet-async@^0.2.0:
+  version "0.2.0"
+  resolved "https://unpm.uberinternal.com/react-helmet-async/-/react-helmet-async-0.2.0.tgz#d20d8725c1dcdcc95d54e281a1040af47c3abffa"
+  dependencies:
+    invariant "^2.2.4"
+    prop-types "^15.6.1"
+    react-fast-compare "^2.0.2"
+    shallowequal "^1.0.2"
+
+react-is@^16.6.1, react-is@^16.6.3, react-is@^16.7.0:
   version "16.7.0"
   resolved "https://unpm.uberinternal.com/react-is/-/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
 
@@ -4722,7 +4760,7 @@ react@16.6.3:
     prop-types "^15.6.2"
     scheduler "^0.11.2"
 
-react@^16.6.3:
+react@^16.6.3, react@^16.7.0:
   version "16.7.0"
   resolved "https://unpm.uberinternal.com/react/-/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"
   dependencies:
@@ -4802,6 +4840,10 @@ regenerate@^1.4.0:
 regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://unpm.uberinternal.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
+
+regenerator-runtime@^0.13.1:
+  version "0.13.1"
+  resolved "https://unpm.uberinternal.com/regenerator-runtime/-/regenerator-runtime-0.13.1.tgz#522ea2aafd9200a00eee143dc14219a35a0f3991"
 
 regenerator-transform@^0.11.0:
   version "0.11.1"
@@ -5066,6 +5108,10 @@ sha.js@^2.4.0, sha.js@^2.4.8:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+shallowequal@^1.0.2:
+  version "1.1.0"
+  resolved "https://unpm.uberinternal.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
 
 shebang-command@^1.2.0:
   version "1.2.0"

@@ -255,6 +255,10 @@
    */
   "projects": [
     {
+      "packageName": "fusion-plugin-rpc",
+      "projectFolder": "fusion-plugin-rpc"
+    },
+    {
       "packageName": "fusion-plugin-error-handling",
       "projectFolder": "fusion-plugin-error-handling"
     },

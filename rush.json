@@ -255,6 +255,10 @@
    */
   "projects": [
     {
+      "packageName": "fusion-plugin-redux-action-emitter-enhancer",
+      "projectFolder": "fusion-redux-action-emitter-enhancer"
+    },
+    {
       "packageName": "fusion-plugin-react-redux",
       "projectFolder": "fusion-plugin-react-redux"
     },

@@ -255,6 +255,10 @@
    */
   "projects": [
     {
+      "packageName": "fusion-scaffolder",
+      "projectFolder": "fusion-scaffolder"
+    },
+    {
       "packageName": "fusion-apollo",
       "projectFolder": "fusion-apollo"
     },

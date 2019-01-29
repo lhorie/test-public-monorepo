@@ -255,6 +255,10 @@
    */
   "projects": [
     {
+      "packageName": "fusion-plugin-node-performance-emitter",
+      "projectFolder": "fusion-plugin-node-performance-emitter"
+    },
+    {
       "packageName": "fusion-plugin-browser-performance-emitter",
       "projectFolder": "fusion-plugin-browser-performance-emitter"
     },

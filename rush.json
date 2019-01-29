@@ -255,6 +255,10 @@
    */
   "projects": [
     {
+      "packageName": "fusion-apollo",
+      "projectFolder": "fusion-apollo"
+    },
+    {
       "packageName": "fusion-apollo-universal-client",
       "projectFolder": "fusion-apollo-universal-client"
     },

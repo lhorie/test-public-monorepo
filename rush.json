@@ -255,6 +255,10 @@
    */
   "projects": [
     {
+      "packageName": "fusion-plugin-browser-performance-emitter",
+      "projectFolder": "fusion-plugin-browser-performance-emitter"
+    },
+    {
       "packageName": "fusion-plugin-universal-events",
       "projectFolder": "fusion-plugin-universal-events"
     },

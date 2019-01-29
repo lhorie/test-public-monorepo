@@ -255,6 +255,10 @@
    */
   "projects": [
     {
+      "packageName": "fusion-react",
+      "projectFolder": "fusion-react"
+    },
+    {
       "packageName": "fusion-scaffolder",
       "projectFolder": "fusion-scaffolder"
     },

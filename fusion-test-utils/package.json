@@ -60,7 +60,7 @@
   "dependencies": {
     "assert": "^1.4.1",
     "koa": "^2.6.2",
-    "node-mocks-http": "^1.6.6"
+    "node-mocks-http": "^1.7.3"
   },
   "peerDependencies": {
     "fusion-core": "^1.10.2"

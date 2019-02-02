@@ -41,7 +41,7 @@
     "fusion-test-utils": "^1.3.1",
     "fusion-tokens": "^1.1.1",
     "generic-session": "0.1.2",
-    "get-port": "4.0.0",
+    "get-port": "^4.0.0",
     "nyc": "^13.1.0",
     "prettier": "^1.16.3",
     "sinon": "^7.1.1",

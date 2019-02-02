@@ -62,7 +62,7 @@
   },
   "peerDependencies": {
     "fusion-core": "^1.10.2",
-    "fusion-tokens": "^1.1.0"
+    "fusion-tokens": "^1.1.1"
   },
   "engines": {
     "node": ">= 8.9.0"

@@ -2,7 +2,9 @@
   "name": "my-public",
   "version": "0.0.1",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "mkdir -p dist && cp src/index.js dist/",
     "flow": "flow check",

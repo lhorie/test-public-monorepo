@@ -6,7 +6,7 @@
 ../../../node_modules/
 
 [libs]
-../../../node_modules/fusion-core/flow-typed
+../../.../../node_modules/fusion-core/flow-typed
 
 [lints]
 

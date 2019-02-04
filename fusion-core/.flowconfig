@@ -2,7 +2,7 @@
 .*/node_modules/.*[^(package)]\.json$
 
 [include]
-../../common/temp/node_modules
+../../node_modules
 ./src/
 
 [libs]

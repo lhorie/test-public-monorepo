@@ -7,7 +7,7 @@
 ../../common/temp/node_modules
 
 [libs]
-../../common/temp/node_modules/fusion-core/flow-typed
+./node_modules/fusion-core/flow-typed
 
 [lints]
 

@@ -1,7 +1,7 @@
 {
   "name": "fusion-core",
   "description": "A generic entry point class for FusionJS applications that is used by the FusionJS runtime.",
-  "version": "1.10.2",
+  "version": "1.10.3",
   "license": "MIT",
   "repository": "fusionjs/fusion-core",
   "files": [
@@ -55,10 +55,10 @@
     "eslint-plugin-jest": "^22.2.2",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "flow-bin": "^0.91.0",
+    "flow-bin": "^0.92.1",
     "node-fetch": "^2.3.0",
-    "nyc": "^13.1.0",
-    "prettier": "^1.16.3",
+    "nyc": "^13.2.0",
+    "prettier": "^1.16.4",
     "tape-cup": "^4.7.1",
     "unitest": "^2.1.1"
   },

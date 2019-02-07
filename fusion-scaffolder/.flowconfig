@@ -3,6 +3,7 @@
 
 [include]
 ../../common/temp/node_modules
+/
 
 [libs]
 

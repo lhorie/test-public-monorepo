@@ -7,6 +7,7 @@
  */
 
 import tape from 'tape-cup';
+import type {tape$TestCb} from 'tape-cup';
 import {compose} from '../compose';
 
 import type {Context} from '../types.js';
@@ -14,7 +15,7 @@ import type {Context} from '../types.js';
 const env = __BROWSER__ ? 'BROWSER' : 'NODE';
 
 function testHelper(tapeFn) {
-  return (name: string, testFn: Function) => {
+  return (name: string, testFn: tape$TestCb) => {
     return tapeFn(`${env} - ${name}`, testFn);
   };
 }

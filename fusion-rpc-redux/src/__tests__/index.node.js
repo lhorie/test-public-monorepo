@@ -16,7 +16,15 @@ import {
 } from '../index';
 
 test('Flow tests', async t => {
+  const failurePath = 'src/fixtures/failure';
   const successPath = 'src/fixtures/success';
+  try {
+    await execa.shell(`flow check ${failurePath}`);
+    t.fail('Should fail flow check');
+  } catch (e) {
+    const {stdout} = e;
+    t.ok(stdout.includes('Found 5 errors'));
+  }
   await execa.shell(`flow check ${successPath}`);
   t.end();
 });

@@ -6,6 +6,7 @@
 import type {AssetInfo} from './types';
 
 const cacheName = '0.0.0'; // we don't expect this to change
+const debug = console;
 
 export default function getHandlers(assetInfo: AssetInfo) {
   const {precachePaths, cacheablePaths} = assetInfo;
@@ -26,15 +27,19 @@ export default function getHandlers(assetInfo: AssetInfo) {
               );
           })
           .catch(e => {
-            throw new Error(`sw: error updating cache ${cacheName}: ${e}`);
+            // Don't throw an error because we expect CORS (CDN) requests to not be precacheable
+            // (`addAll` expects a 200 response, but CORS returns an opaque response)
+            // CORS resources will be lazily cached on first fetch instead
+            /* eslint-disable-next-line no-console */
+            debug.log(`[sw debug] unable to pre-cache some resources: ${e}`);
           })
       );
     },
     onFetch: (event: FetchEvent) => {
-      const HTML_TTL = 1 * 24 * 60 * 60 * 1001; // 1 day
       const expectsHtml = requestExpectsHtml(event.request);
       if (
         !expectsHtml &&
+        !cacheablePaths.includes(event.request.url) &&
         !cacheablePaths.includes(new URL(event.request.url).pathname)
       ) {
         // bypass service worker, use network
@@ -42,18 +47,10 @@ export default function getHandlers(assetInfo: AssetInfo) {
       }
       const p = caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          if (expectsHtml) {
-            const responseCreated = new Date(
-              cachedResponse.headers.get('date') || 0
-            ).valueOf();
-            if (Date.now() - responseCreated > HTML_TTL) {
-              // html expired: use the cache, but refresh cache for next time
-              fetchNCache(event.request, expectsHtml);
-            }
-          }
-          return cachedResponse;
+          fetchAndCache(event.request, expectsHtml); // async update cache for next time
+          return cachedResponse; // return cache now
         }
-        return fetchNCache(event.request, expectsHtml);
+        return fetchAndCache(event.request, expectsHtml); // fetch, then cache and return
       });
       event.respondWith(p);
       event.waitUntil(p);
@@ -65,7 +62,7 @@ function getOutdatedKeys(cache, cacheablePaths) {
   return cache.keys().then(requests =>
     requests.filter(request => {
       return !cacheablePaths.find(key => {
-        return location.origin + String(key) === request.url;
+        return origin() + String(key) === request.url;
       });
     })
   );
@@ -75,9 +72,11 @@ function removeKeys(cache, keys) {
   return Promise.all(keys.map(key => cache.delete(key)));
 }
 
-function fetchNCache(request, expectsHtml) {
+function fetchAndCache(request, expectsHtml) {
   return fetch(request).then(resp => {
-    if (resp.status !== 200) {
+    // Allow 0 status code because that is opaque response from behind CORS
+    // We do an immediate network fetch after this, so if response was bad it won't stay bad
+    if (resp.status !== 200 && resp.status !== 0) {
       return Promise.resolve(resp);
     }
     const clonedResponse = resp.clone();
@@ -85,6 +84,12 @@ function fetchNCache(request, expectsHtml) {
       if (expectsHtml) {
         // check we got html before caching
         if (!responseIsHtml(clonedResponse)) {
+          debug.log(
+            `[sw debug] expected HTML but got ${(clonedResponse &&
+              clonedResponse.headers &&
+              clonedResponse.headers.get('content-type')) ||
+              'unknown'}`
+          );
           return Promise.resolve(resp);
         }
       }
@@ -108,4 +113,9 @@ function responseIsHtml(response) {
   }
   const contentType = response.headers.get('content-type');
   return contentType && contentType.indexOf('html') > -1;
+}
+
+function origin() {
+  const {origin, protocol, hostname, port} = location;
+  return origin || `${protocol}'//'${hostname}${port ? ':' + port : ''}`;
 }

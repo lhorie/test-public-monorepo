@@ -255,6 +255,10 @@
    */
   "projects": [
     {
+      "packageName": "create-fusion-app",
+      "projectFolder": "create-fusion-app"
+    },
+    {
       "packageName": "fusion-plugin-service-worker",
       "projectFolder": "fusion-plugin-service-worker"
     },

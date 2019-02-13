@@ -1,0 +1,24 @@
+// @noflow
+import App from 'fusion-core';
+// $FlowFixMe
+import {gql} from 'fusion-apollo';
+
+const schema = gql('./schema.gql');
+const query = gql('./query.gql');
+if (__BROWSER__) {
+  window.schema = schema;
+  window.query = query;
+}
+
+export default (async function() {
+  const app = new App('element', el => el);
+  __NODE__ &&
+    app.middleware((ctx, next) => {
+      if (ctx.url === '/schema') {
+        ctx.body = schema;
+      }
+      return next();
+    });
+
+  return app;
+});

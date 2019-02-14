@@ -40,7 +40,7 @@
     "fusion-tokens": "^1.1.1",
     "graphql": "^14.1.1",
     "graphql-tools": "^4.0.3",
-    "nyc": "^13.2.0",
+    "nyc": "^13.3.0",
     "prettier": "^1.16.4",
     "react": "^16.8.2",
     "react-apollo": "^2.4.1",

@@ -42,7 +42,7 @@
     "fusion-tokens": "^1.1.1",
     "generic-session": "0.1.2",
     "get-port": "^4.1.0",
-    "nyc": "^13.2.0",
+    "nyc": "^13.3.0",
     "prettier": "^1.16.4",
     "sinon": "^7.1.1",
     "tape-cup": "^4.7.1",

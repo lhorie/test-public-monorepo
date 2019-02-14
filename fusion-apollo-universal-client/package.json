@@ -46,9 +46,9 @@
     "graphql-tools": "^4.0.3",
     "prettier": "^1.16.4",
     "puppeteer": "^1.12.2",
-    "react": "^16.8.1",
+    "react": "^16.8.2",
     "react-apollo": "^2.4.1",
-    "react-dom": "^16.8.1",
+    "react-dom": "^16.8.2",
     "request-promise": "^4.2.2",
     "tape-cup": "^4.7.1",
     "unfetch": "^4.0.1",
@@ -67,8 +67,8 @@
     "fusion-core": "^1.10.4-0",
     "fusion-tokens": "^1.1.1",
     "graphql": "^14.1.1",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
   },
   "engines": {
     "node": ">= 8.9.0"

@@ -54,8 +54,8 @@
     "fusion-tokens": "^1.1.1",
     "nyc": "^13.2.0",
     "prettier": "^1.16.4",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
     "regenerator-runtime": "^0.13.1",
     "tape-cup": "^4.7.1",
     "unitest": "^2.1.1"

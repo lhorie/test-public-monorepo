@@ -82,7 +82,7 @@
     "fusion-tokens": "^1.1.1",
     "globby": "^8.0.1",
     "graphql": "^14.1.1",
-    "locale": "0.1.0",
+    "locale": "^0.1.0",
     "prettier": "^1.16.4",
     "puppeteer": "^1.12.2",
     "react": "^16.8.1",

@@ -22,7 +22,7 @@
     "./dist/browser.es2015.es.js": "./dist/browser.es2017.es.js"
   },
   "dependencies": {
-    "prop-types": "^15.7.1"
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",

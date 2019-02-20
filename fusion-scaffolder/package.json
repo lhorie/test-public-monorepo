@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@babel/cli": "^7.1.5",
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.3.3",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-flow": "^7.0.0",
@@ -22,10 +22,10 @@
     "recursive-readdir": "^2.2.2"
   },
   "devDependencies": {
-    "eslint": "^5.13.0",
+    "eslint": "^5.14.1",
     "eslint-config-fusion": "^4.0.0",
     "eslint-plugin-cup": "^2.0.1",
-    "eslint-plugin-flowtype": "^3.4.1",
+    "eslint-plugin-flowtype": "^3.4.2",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-prettier": "^3.0.1",

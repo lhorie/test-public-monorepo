@@ -386,14 +386,7 @@
       "packageName": "fusion-plugin-styletron-react",
       "projectFolder": "fusion-plugin-styletron-react"
     },
-    {
-      "packageName": "my-public",
-      "projectFolder": "my-public",
-    },
-    {
-      "packageName": "my-other",
-      "projectFolder": "my-other",
-    },
+
     // {
     //   /**
     //    * The NPM package name of the project (must match package.json)

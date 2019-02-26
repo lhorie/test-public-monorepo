@@ -41,7 +41,7 @@
     "fusion-tokens": "^1.1.1",
     "nyc": "^13.3.0",
     "prettier": "^1.16.4",
-    "react": "^16.8.2",
+    "react": "^16.8.3",
     "react-redux": "^5.1.1",
     "redux": "^4.0.1",
     "tape-cup": "^4.7.1",
